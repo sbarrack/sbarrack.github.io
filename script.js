@@ -1,6 +1,9 @@
 $(document).ready(function(){
     $("#body").load("home.html");
-    $("link").click(function(){
+    $(".link").click(function(){
+        $("#body").load($(this).attr("page")+".html");
+    });
+    $(".navbar a.right").click(function(){
         $("#body").load($(this).attr("page")+".html");
     });
 });
