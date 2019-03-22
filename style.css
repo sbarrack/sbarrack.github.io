@@ -17,6 +17,7 @@ body {
 .navbar {
     overflow: hidden;
     background-color: #333;
+    padding: 0 5px;
 }
 
 .navbar a {
@@ -24,8 +25,12 @@ body {
     display: block;
     color: #ddd;
     text-align: center;
-    padding: 15px;
+    padding: 15px 10px;
     text-decoration: none;
+    -moz-transition: background-color .3s;
+    -webkit-transition: background-color .3s;
+    -o-transition: background-color .3s;
+    transition: background-color .3s;
 }
 
 .navbar a.right {
@@ -35,6 +40,10 @@ body {
 .navbar a:hover {
     background-color: #ddd;
     color: #333;
+    -moz-transition: background-color .3s;
+    -webkit-transition: background-color .3s;
+    -o-transition: background-color .3s;
+    transition: background-color .3s;
 }
 
 * {
