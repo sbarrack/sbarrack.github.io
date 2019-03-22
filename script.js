@@ -6,7 +6,7 @@ $(document).ready(function(){
          type: 'GET',
          url: url,
          success: function(data) { 
-            $("#body").load(data); 
+            $("bod").load(data); 
         } 
        }); 
      });
