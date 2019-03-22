@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $("#home").click(function(){
-        $("#body").load("home.html");
+    $("#body").load("home.html");
+    $("#link").click(function(){
+        $("#body").load($(this).attr("page")+".html");
     });
 });
