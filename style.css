@@ -4,6 +4,11 @@ body {
 }
 
 .header {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
     padding: 20px 0;
     text-align: center;
     background: linear-gradient(5deg, cyan, magenta);
@@ -48,6 +53,10 @@ body {
 
 * {
     box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 @media screen and (max-width: 400px) {
