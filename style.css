@@ -5,20 +5,27 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    right: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 #bgvid {
     position: absolute;
-    top: 10vw;
+    top: 15vw;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -99;
     min-width: 640px;
     width: 100%;
     max-width: 1280px;
+    min-height: 480px;
     height: 100vw;
+    max-height: 720px;
     pointer-events: none;
     overflow: hidden;
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
 }
 
 .header {
@@ -26,7 +33,8 @@ body {
     max-height: 200px;
     padding: 30px 0;
     text-align: center;
-    color: black;
+    color: white;
+    text-shadow: 0px 0px 4px black;
     overflow: hidden;
 }
 
@@ -53,7 +61,7 @@ body {
 }
 
 .navbar #menu {
-    display: block;
+    display: none;
 }
 
 .navbar a.right {
@@ -61,6 +69,7 @@ body {
 }
 
 .navbar a:hover {
+    cursor: pointer;
     background-color: #ddd;
     color: #333;
     -moz-transition: background-color .3s;
@@ -78,6 +87,10 @@ body {
 }
 
 @media screen and (max-width: 640px) {
+    .header {
+        padding: 10px 0;
+    }
+
     .header p {
         display: none;
     }
