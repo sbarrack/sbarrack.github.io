@@ -8,7 +8,6 @@ async function delay(ms) {
 
 window.onload = function() {
     var toggle = true
-    var restore = false
     const time = 50
 
     var menu = document.getElementById("menu")
@@ -26,14 +25,12 @@ window.onload = function() {
                 await delay(time);
                 item.style.display = "none"
             }
-            restore = true
         }
         toggle = !toggle
     }
 
     window.onresize = function() {
-        if (restore && window.innerWidth > 640) {
-            restore = false
+        if (window.innerWidth > 640) {
             for (item of items) {
                 item.style.display = "block"
             }
