@@ -1,58 +1,35 @@
-html {
-    background: black;
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    right: 0;
-    max-width: 100vw;
-    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-#bgvid {
-    position: absolute;
-    top: 15vw;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -99;
-    min-width: 640px;
-    width: 100%;
-    max-width: 1280px;
-    min-height: 480px;
-    height: 100vw;
-    max-height: 720px;
-    pointer-events: none;
-    overflow: hidden;
-    -webkit-filter: blur(1px);
-    filter: blur(1px);
-    clip: rect(0, 1280px, 720px, 0);
-}
-
-.header {
-    height: 15%;
-    max-height: 200px;
-    padding: 30px 0;
+body header {
+    padding: 25px;
     text-align: center;
     color: white;
-    text-shadow: 0px 0px 4px black;
+    background: black;
     overflow: hidden;
 }
 
-.header h1 {
-    font-size: 40px;
+body header p {
+    display: none;
 }
 
-.navbar {
-    overflow: hidden;
+nav {
     background-color: #333;
+    overflow: hidden;
 }
 
-.navbar a {
+nav a {
+    display: none;
+    width: 100%;
     float: left;
-    display: block;
-    color: #ddd;
     text-align: center;
+    color: #ddd;
     padding: 15px 10px;
     text-decoration: none;
     -moz-transition: background-color .3s;
@@ -61,55 +38,41 @@ body {
     transition: background-color .3s;
 }
 
-.navbar #menu {
-    display: none;
-}
-
-.navbar a.right {
-    float: right;
-}
-
-.navbar a:hover {
+nav a:hover {
     cursor: pointer;
     background-color: #ddd;
     color: #333;
-    -moz-transition: background-color .3s;
-    -webkit-transition: background-color .3s;
-    -o-transition: background-color .3s;
-    transition: background-color .3s;
 }
 
-* {
-    box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+nav a.right {
+    float: right;
 }
 
-@media screen and (max-width: 640px) {
-    .header {
-        padding: 10px 0;
-    }
+nav a#menu {
+    display: block;
+}
 
-    .header p {
-        display: none;
-    }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 
-    .navbar a {
-        display: none;
-        float: none;
-        width: 100%;
-    }
+.sticky + h1 {
+    padding-top: calc(1rem + 30px);
+}
 
-    .navbar #menu {
+@media only screen and (min-width: 600px) {
+    body header p {
         display: block;
     }
-}
+    
+    nav a {
+        display: block;
+        width: auto;
+    }
 
-.footer {
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
-    bottom: 0;
+    nav a#menu {
+        display: none;
+    }
 }
