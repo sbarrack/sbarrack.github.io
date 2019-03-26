@@ -4,12 +4,14 @@ function changePage(page) {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("page").innerHTML = this.responseText;
-        } else if (this.status == 404) {
-            page = '404.html';
         }
     };
 
-    xhttp.open("GET", page, true);
+    if (this.status != 404) {
+        xhttp.open("GET", page, true);
+    } else {
+        xhttp.open("GET", '404.html', true);
+    }
     xhttp.send();
 }
 
