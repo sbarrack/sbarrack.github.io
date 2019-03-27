@@ -7,11 +7,7 @@ function changePage(page) {
         }
     };
 
-    if (this.status != 404) {
-        xhttp.open("GET", page, true);
-    } else {
-        xhttp.open("GET", '404.html', true);
-    }
+    xhttp.open("GET", page, true);
     xhttp.send();
 }
 
