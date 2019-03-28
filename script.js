@@ -30,4 +30,17 @@ window.onload = function() {
         sticky = navbar.offsetTop;
     };
 
+    // motd
+    var motdFile = '';
+    var motd = new XMLHttpRequest();
+
+    motd.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("motd").innerText = this.responseText;
+        }
+    };
+
+    motd.open("GET", page, true);
+    motd.send();
+
 }
