@@ -7,7 +7,7 @@ async function changePage(page) {
         }
     };
 
-    await xhttp.open("GET", page, true);
+    await xhttp.open("GET", page);
     xhttp.send();
     if (motd.state == 404) {
         motd.open("GET", '404.html');
@@ -15,7 +15,7 @@ async function changePage(page) {
     }
 }
 
-window.onload = function() {
+window.onload = async function() {
     // sticky navbar
     const navbar = document.getElementById("nav");
     var sticky = navbar.offsetTop;
@@ -44,7 +44,7 @@ window.onload = function() {
     };
 
     var today = new Date();
-    motd.open("GET", 'motd/' + today.toDateString().slice(4).replace(' ', '_') + '.html', false);
+    await motd.open("GET", 'motd/' + today.toDateString().slice(4).replace(' ', '_') + '.html');
     motd.send();
     if (motd.state == 404) {
         motd.open("GET", 'motd/' + today.getDay() + '.html');
