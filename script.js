@@ -1,21 +1,20 @@
-async function changePage(page) {
+function changePage(page) {
     var xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("page").innerHTML = this.responseText;
+        } else if (this.readyState != 4 && this.state == 404) {
+            motd.open("GET", '404.html');
+            motd.send();
         }
     };
 
-    await xhttp.open("GET", page);
+    xhttp.open("GET", page);
     xhttp.send();
-    if (motd.state == 404) {
-        motd.open("GET", '404.html');
-        motd.send();
-    }
 }
 
-window.onload = async function() {
+window.onload = function() {
     // sticky navbar
     const navbar = document.getElementById("nav");
     var sticky = navbar.offsetTop;
@@ -30,25 +29,23 @@ window.onload = async function() {
         }
     };
 
-    window.onresize = () => {
+    window.onresize = function() {
         sticky = navbar.offsetTop;
     };
 
     // MOTD
+    var today = new Date();
     var motd = new XMLHttpRequest();
 
     motd.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("motd").innerHTML = this.responseText;
+        } else if (this.readyState != 4 && this.status == 404) {
+            motd.open("GET", 'motd/' + today.getDay() + '.html');
+            motd.send();
         }
     };
 
-    var today = new Date();
-    await motd.open("GET", 'motd/' + await today.toDateString().slice(4).replace(' ', '_') + '.html');
+    motd.open("GET", 'motd/' + today.toDateString().slice(4).replace(' ', '_') + '.html');
     motd.send();
-    if (motd.state == 404) {
-        motd.open("GET", 'motd/' + today.getDay() + '.html');
-        motd.send();
-    }
-
 }
