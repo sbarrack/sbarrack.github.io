@@ -1,4 +1,4 @@
-function changePage(page) {
+async function changePage(page) {
     var xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function() {
@@ -7,10 +7,10 @@ function changePage(page) {
         }
     };
 
-    xhttp.open("GET", page, false);
+    await xhttp.open("GET", page, true);
     xhttp.send();
     if (motd.state == 404) {
-        motd.open("GET", '404.html', true);
+        motd.open("GET", '404.html');
         motd.send();
     }
 }
@@ -48,7 +48,7 @@ window.onload = function() {
     motd.open("GET", 'motd/' + today.toDateString().slice(4).replace(' ', '_') + '.html', false);
     motd.send();
     if (motd.state == 404) {
-        motd.open("GET", 'motd/' + today.getDay() + '.html', true);
+        motd.open("GET", 'motd/' + today.getDay() + '.html');
         motd.send();
     }
 
