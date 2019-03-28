@@ -4,11 +4,15 @@ function changePage(page) {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("page").innerHTML = this.responseText;
-        } else if (this.readyState != 4 && this.state == 404) {
-            motd.open("GET", '404.html');
-            motd.send();
         }
     };
+
+    xhttp.onerror = function() {
+        if (this.status == 404) {
+            this.open("GET", '404.html');
+            this.send();
+        }
+    }
 
     xhttp.open("GET", page);
     xhttp.send();
@@ -40,11 +44,15 @@ window.onload = function() {
     motd.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("motd").innerHTML = this.responseText;
-        } else if (this.readyState != 4 && this.status == 404) {
-            motd.open("GET", 'motd/' + today.getDay() + '.html');
-            motd.send();
         }
     };
+
+    motd.onerror = function() {
+        if (this.status == 404) {
+            this.open("GET", 'motd/' + today.getDay() + '.html');
+            this.send();
+        }
+    }
 
     motd.open("GET", 'motd/' + today.toDateString().slice(4).replace(' ', '_') + '.html');
     motd.send();
