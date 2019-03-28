@@ -7,13 +7,6 @@ function changePage(page) {
         }
     };
 
-    xhttp.onerror = function() {
-        if (this.status == 404) {
-            this.open("GET", '404.html');
-            this.send();
-        }
-    }
-
     xhttp.open("GET", page);
     xhttp.send();
 }
