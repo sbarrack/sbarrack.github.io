@@ -15,7 +15,7 @@ body header {
     overflow: hidden;
 }
 
-body header p {
+#motd {
     display: none;
 }
 
@@ -64,7 +64,7 @@ nav a#menu {
 }
 
 @media only screen and (min-width: 600px) {
-    body header p {
+    #motd {
         display: block;
     }
     

@@ -30,18 +30,16 @@ window.onload = function() {
         sticky = navbar.offsetTop;
     };
 
-    // motd
-    var motdFile = 'motd/' + new Date().toDateString().slice(4) + '.txt';
+    // MOTD
     var motd = new XMLHttpRequest();
 
     motd.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            var elem = document.getElementById("motd");
-            elem.innerText = this.responseText;
+            document.getElementById("motd").innerText = this.responseText;
         }
     };
 
-    motd.open("GET", motdFile, true);
+    motd.open("GET", 'motd/' + new Date().toDateString().slice(4) + '.txt', true);
     motd.send();
 
 }
