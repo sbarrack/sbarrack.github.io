@@ -44,7 +44,7 @@ window.onload = async function() {
     };
 
     var today = new Date();
-    await motd.open("GET", 'motd/' + today.toDateString().slice(4).replace(' ', '_') + '.html');
+    await motd.open("GET", 'motd/' + await today.toDateString().slice(4).replace(' ', '_') + '.html');
     motd.send();
     if (motd.state == 404) {
         motd.open("GET", 'motd/' + today.getDay() + '.html');
