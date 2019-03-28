@@ -31,16 +31,17 @@ window.onload = function() {
     };
 
     // motd
-    var motdFile = '';
+    var motdFile = 'motd/' + new Date().toDateString().slice(4) + '.txt';
     var motd = new XMLHttpRequest();
 
     motd.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("motd").innerText = this.responseText;
+            var elem = document.getElementById("motd");
+            elem.innerText = this.responseText;
         }
     };
 
-    motd.open("GET", page, true);
+    motd.open("GET", motdFile, true);
     motd.send();
 
 }
