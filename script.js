@@ -7,8 +7,12 @@ function changePage(page) {
         }
     };
 
-    xhttp.open("GET", page, true);
+    xhttp.open("GET", page, false);
     xhttp.send();
+    if (motd.state == 404) {
+        motd.open("GET", '404.html', true);
+        motd.send();
+    }
 }
 
 window.onload = function() {
@@ -40,8 +44,12 @@ window.onload = function() {
     };
 
     var today = new Date();
-    var motdFile = new File('motd/' + today.toDateString().slice(4).replace(' ', '_') + '.html')
-    motd.open("GET", motdFile.exists() ? motdFile.name : 'motd/' + today.getDay() + '.html', true);
+    var motdFile = new File()
+    motd.open("GET", 'motd/' + today.toDateString().slice(4).replace(' ', '_') + '.html', false);
     motd.send();
+    if (motd.state == 404) {
+        motd.open("GET", 'motd/' + today.getDay() + '.html', true);
+        motd.send();
+    }
 
 }
