@@ -39,7 +39,7 @@ window.onload = function() {
         }
     };
 
-    motd.open("GET", 'motd/' + new Date().toDateString().slice(4) + '.txt', true);
+    motd.open("GET", 'motd/' + new Date().toDateString().slice(4).replace(' ', '_') + '.txt', true);
     motd.send();
 
 }
