@@ -35,11 +35,13 @@ window.onload = function() {
 
     motd.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("motd").innerText = this.responseText;
+            document.getElementById("motd").innerHTML = this.responseText;
         }
     };
 
-    motd.open("GET", 'motd/' + new Date().toDateString().slice(4).replace(' ', '_') + '.txt', true);
+    var today = new Date();
+    var motdFile = new File('motd/' + today.toDateString().slice(4).replace(' ', '_') + '.html')
+    motd.open("GET", motdFile.exists() ? motdFile.name : 'motd/' + today.getDay() + '.html', true);
     motd.send();
 
 }
