@@ -44,7 +44,6 @@ window.onload = function() {
     };
 
     var today = new Date();
-    var motdFile = new File()
     motd.open("GET", 'motd/' + today.toDateString().slice(4).replace(' ', '_') + '.html', false);
     motd.send();
     if (motd.state == 404) {
