@@ -1,14 +1,18 @@
-function changePage(page) {
+function getFile(page) {
     var xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("page").innerHTML = this.responseText;
+            return this.responseText;
         }
     };
 
     xhttp.open("GET", page);
     xhttp.send();
+}
+
+function changePage(page) {
+    document.getElementById("page").innerHTML = getFile(page);
 }
 
 window.onload = function() {
@@ -31,22 +35,7 @@ window.onload = function() {
     };
 
     // MOTD
-    var today = new Date();
-    var motd = new XMLHttpRequest();
+    var motds = JSON.parse(getFile('motd.json')).motds
+    document.getElementById("motd").innerText = motds[Math.floor(Math.random() * motds.length)];
 
-    motd.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("motd").innerHTML = this.responseText;
-        }
-    };
-
-    motd.onerror = function() {
-        if (this.status == 404) {
-            this.open("GET", 'motd/' + today.getDay() + '.html');
-            this.send();
-        }
-    }
-
-    motd.open("GET", 'motd/' + today.toDateString().slice(4).replace(' ', '_') + '.html');
-    motd.send();
 }
