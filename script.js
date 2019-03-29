@@ -17,6 +17,7 @@ function changePage(page) {
 }
 
 window.onload = function() {
+    'use strict';
     // sticky navbar
     const navbar = document.getElementById("nav");
     var sticky = navbar.offsetTop;
