@@ -1,4 +1,5 @@
 function getFile(page) {
+    'use strict';
     var xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function() {
