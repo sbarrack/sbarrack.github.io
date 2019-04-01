@@ -1,5 +1,4 @@
 function getFile(page) {
-    'use strict';
     var xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function() {
@@ -17,7 +16,6 @@ function changePage(page) {
 }
 
 window.onload = function() {
-    'use strict';
     // sticky navbar
     const navbar = document.getElementById("nav");
     var sticky = navbar.offsetTop;
@@ -37,7 +35,7 @@ window.onload = function() {
     };
 
     // MOTD
-    var motds = JSON.parse(getFile('motd.json')).motds
+    var motds = JSON.parse(getFile('motd.json')).motds // it no work
     document.getElementById("motd").innerText = motds[Math.floor(Math.random() * motds.length)];
 
 }
