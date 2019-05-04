@@ -1,37 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Stephen Barrack">
-        <meta name="description" content="Personal website of Stephen Barrack">
-        <meta name="keywords" content="">
-        
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+<html>
 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <body>
-        <header>
-            <h1>Kongo Bongo</h1>
-            <p><div id="motd">&lt;insert MOTD here&gt;</div></p>
-        </header>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-        <nav id="nav">
-            <a id="menu" onclick=""><i class="fas fa-bars"></i></a>
-            <a onclick="changePage('home.html')"><i class="fas fa-home"></i></a>
-            <a onclick="changePage('projects.html')">Projects</a>
-            <a onclick="changePage('docs.html')">Docs</a>
-            <a onclick="changePage('blog.html')">Blog</a>
-            <a onclick="changePage('about.html')">About</a>
-            <a class="right" href="https://www.linkedin.com/in/stephenbarrack/"><i class="fab fa-linkedin fa-lg"></i></a>
-            <a class="right" href="https://github.com/sbarrack"><i class="fab fa-github fa-lg"></i></a>
-        </nav>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
 
-        <div id="page"></div>
+<!--make it all dark theme-->
 
-        <footer></footer>
-    </body>
+<body class="has-navbar-fixed-top">
+    <nav class="navbar is-fixed-top is-dark is-spaced" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://sbarrack.github.io">
+                <!--make a logo-->
+                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navi">
+                <i class="icon fas fa-bars fa-lg"></i>
+            </a>
+        </div>
+
+        <div id="navi" class="navbar-menu">
+            <div class="navbar-start"></div>
+            <div class="navbar-end">
+                <!--fix padding from desktop navbar covering section titles-->
+                <a href="#Home" class="navbar-item is-size-5">Home</a>
+                <a href="#About" class="navbar-item is-size-5">About</a>
+                <a href="#Portfolio" class="navbar-item is-size-5">Portfolio</a>
+                <a href="#Testamonials" class="navbar-item is-size-5">Testamonials</a>
+                <a href="#Services" class="navbar-item is-size-5">Services</a>
+                <a href="#Contact" class="navbar-item is-size-5">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!--add video bg-->
+    <section id="Home" class="hero is-fullheight-with-navbar">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1">Stephen Barrack</h1>
+                <h2 class="subtitle is-4">I do computer-type stuff</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="About" class="section">
+        <div class="container">
+            <h1 class="title">About</h1>
+            <h2 class="subtitle">&lt;Talk about myself here&gt;</h2>
+        </div>
+    </section>
+
+    <section id="Portfolio" class="section">
+        <div class="container">
+            <h1 class="title">Portfolio</h1>
+            <h2 class="subtitle">&lt;All my work here&gt;</h2>
+        </div>
+    </section>
+
+    <section id="Testamonials" class="section">
+        <div class="container">
+            <h1 class="title">Testamonials</h1>
+            <h2 class="subtitle">&lt;People talk about me here&gt;</h2>
+        </div>
+    </section>
+
+    <section id="Services" class="section">
+        <div class="container">
+            <h1 class="title">Services</h1>
+            <h2 class="subtitle">&lt;What I provide here&gt;</h2>
+        </div>
+    </section>
+
+    <section id="Contact" class="section">
+        <div class="container">
+            <h1 class="title">Contact</h1>
+            <h2 class="subtitle">&lt;How people can reach me as a form submission here&gt;</h2>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <h1 class="title is-3">Footer</h1>
+        </div>
+    </footer>
+</body>
+
 </html>
