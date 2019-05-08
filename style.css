@@ -1,10 +1,15 @@
 body {
     background: #f0f0f0;
-    background-image: url('images/DK-Bongos.jpg');
+    background-image: url('images/0.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    -webkit-transition: background-image 1s linear;
+	-moz-transition: background-image 1s linear;
+	-ms-transition: background-image 1s linear;
+	-o-transition: background-image 1s linear;
+	transition: background-image 1s linear;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;

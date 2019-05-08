@@ -1,6 +1,11 @@
+var count
+const end = 2
+
 $(document).ready(function () {
     $('.navbar-burger').click(toggleNav)
     $('.navbar-item').click(toggleNav)
+    count = 0
+    slideshow()
 })
 
 $(document).on('click', 'a[href^="#"]', function (event) {
@@ -20,4 +25,11 @@ function toggleNav() {
     $('.navbar-burger').toggleClass('is-active')
     $('.navbar-menu').toggleClass('is-active')
     $('.icon').toggleClass('fa-times').toggleClass('fa-bars')
+}
+
+function slideshow() {
+    count = count > end ? 0 : count
+    $('body').css('background-image', 'url("images/bg/' + count++ + '.jpg")').show(0, function () {
+        setTimeout(slideshow, 5000)
+    })
 }
