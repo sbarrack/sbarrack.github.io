@@ -17,14 +17,14 @@ $(window).resize(function () {
     if ($(window).width() >= 1088) {
         $('.navbar-burger').removeClass('is-active')
         $('.navbar-menu').removeClass('is-active')
-        $('.icon').removeClass('fa-times').addClass('fa-bars')
+        $('nav .icon').removeClass('fa-times').addClass('fa-bars')
     }
 })
 
 function toggleNav() {
     $('.navbar-burger').toggleClass('is-active')
     $('.navbar-menu').toggleClass('is-active')
-    $('.icon').toggleClass('fa-times').toggleClass('fa-bars')
+    $('nav .icon').toggleClass('fa-times').toggleClass('fa-bars')
 }
 
 function slideshow() {

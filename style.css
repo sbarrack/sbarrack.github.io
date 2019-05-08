@@ -1,10 +1,11 @@
 body {
     background: #f0f0f0;
-    background-image: url('images/0.jpg');
+    background-image: url('images/bg/0.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    /* buggy on mobile */
     -webkit-transition: background-image 1s linear;
 	-moz-transition: background-image 1s linear;
 	-ms-transition: background-image 1s linear;
@@ -16,7 +17,8 @@ body {
     user-select: none;
 }
 
-.icon {
+.fa-bars,
+.fa-times {
     position: absolute;
     margin: 50%;
     -ms-transform: translate(-50%, -50%);
@@ -34,9 +36,15 @@ body {
 
 .footer {
     padding-bottom: 48px;
-    background: #111;
+    background: #363636;
 }
 
 .footer h1 {
     color: #f0f0f0;
+}
+
+@media screen and (min-width: 769px) {
+    #Contact .field.is-horizontal {
+        padding-right: 12.5%;
+    }
 }
