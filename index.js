@@ -27,7 +27,7 @@ $(document).ready(function () {
 
     function slideshow() {
         count = count > end ? 0 : count
-        $('body').css('background-image', 'url("images/bg/' + count++ + '.jpg")').show(0, function () {
+        $('.hero').css('background-image', 'url("images/bg/' + count++ + '.jpg")').show(0, function () {
             setTimeout(slideshow, 5000)
         })
     }
