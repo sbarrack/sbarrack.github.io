@@ -6,6 +6,14 @@ body {
     user-select: none;
 }
 
+.navbar-item {
+    -webkit-transition: background-color .3s ease-out;
+	-moz-transition: background-color .3s ease-out;
+	-ms-transition: background-color .3s ease-out;
+	-o-transition: background-color .3s ease-out;
+	transition: background-color .3s ease-out;
+}
+
 .fa-bars,
 .fa-times {
     position: absolute;
@@ -51,10 +59,15 @@ body {
     padding: 0 5px;
     color: inherit;
     cursor: pointer;
+    -webkit-transition: opacity .3s ease-out;
+	-moz-transition: opacity .3s ease-out;
+	-ms-transition: opacity .3s ease-out;
+	-o-transition: opacity .3s ease-out;
+	transition: opacity .3s ease-out;
 }
 .social a:hover,
 .social a:focus {
-    opacity: .7;
+    opacity: .6;
 }
 
 @media screen and (min-width: 769px) {
