@@ -36,11 +36,26 @@ body {
 
 .footer {
     padding-bottom: 48px;
+    color: #f0f0f0;
     background: #363636;
 }
 
-.footer h1 {
-    color: #f0f0f0;
+.footer p {
+    font-size: 10pt;
+}
+
+.social {
+    padding: 10px 0;
+}
+
+.social a {
+    padding: 0 5px;
+    color: inherit;
+    cursor: pointer;
+}
+.social a:hover,
+.social a:focus {
+    opacity: .7;
 }
 
 @media screen and (min-width: 769px) {
