@@ -21,7 +21,6 @@ body {
     background-position: center;
     background-origin: content-box;
     background-size: cover;
-    /* buggy on mobile */
     -webkit-transition: background-image 1s linear;
 	-moz-transition: background-image 1s linear;
 	-ms-transition: background-image 1s linear;
