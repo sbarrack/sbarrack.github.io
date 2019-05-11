@@ -22,7 +22,8 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.hero {
+.hero,
+.hero::before {
     background-image: url('images/bg/0.jpg');
     background-attachment: fixed !important;
     background-repeat: no-repeat;
