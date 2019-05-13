@@ -23,17 +23,12 @@ body {
 }
 
 .hero {
-    background-image: url('images/bg/0.jpg');
+    background-image: url('images/bg.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-origin: content-box;
     background-size: cover;
-    -webkit-transition: background-image 1s linear;
-	-moz-transition: background-image 1s linear;
-	-ms-transition: background-image 1s linear;
-	-o-transition: background-image 1s linear;
-	transition: background-image 1s linear;
 }
 
 .hero h1, 
