@@ -36,6 +36,10 @@ body {
     color: #111;
 }
 
+#About .subtitle {
+    padding-top: 3.5rem;
+}
+
 .footer {
     padding-bottom: 48px;
     color: #f0f0f0;
