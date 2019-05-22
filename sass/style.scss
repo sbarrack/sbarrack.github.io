@@ -1,100 +1,178 @@
-@charset "utf-8";
-
-// Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@charset 'utf-8';
 
 // Update Bulma's global variables
-$family-sans-serif: 'Ubuntu', sans-serif;
-// $grey-dark: #333;
-// $grey-light: #555;
-// $primary: purple;
-// $link: orange;
-$widescreen-enabled: false;
-$fullhd-enabled: false;
+$black: hsl(0, 0%, 4%);
+$black-bis: hsl(0, 0%, 7%);
+$black-ter: hsl(0, 0%, 14%);
+$grey-darker: hsl(0, 0%, 21%);
+$grey-dark: hsl(0, 0%, 29%);
+$grey: hsl(0, 0%, 48%);
+$grey-light: hsl(0, 0%, 71%);
+$grey-lighter: hsl(0, 0%, 86%);
+$white-ter: hsl(0, 0%, 96%);
+$white-bis: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+$orange: hsl(14, 100%, 53%);
+$yellow: hsl(48, 100%, 67%);
+$green: hsl(141, 71%, 48%);
+$turquoise: hsl(171, 100%, 41%);
+$cyan: hsl(204, 86%, 53%);
+$blue: hsl(217, 71%, 53%);
+$purple: hsl(271, 100%, 71%);
+$red: hsl(348, 100%, 61%);
+
+// $primary: $turquoise;
+// $link: $blue;
+// $link-visited: $purple;
+// $link-hover: $grey-darker;
+// $link-hover-border: $grey-light;
+// $link-focus: $grey-darker;
+// $link-focus-border: $blue;
+// $link-active: $grey-darker;
+// $link-active-border: $grey-dark;
+// $info: $cyan;
+// $success: $green;
+// $warning: $yellow;
+// $danger: $red;
+// $dark: $grey-darker;
+// $text: $grey-dark;
+// $text-light: $grey;
+// $text-strong: $grey-darker;
+// $code: $red;
+
+// $widescreen-enabled: false;
+// $fullhd-enabled: false;
 
 // Update some of Bulma's component variables
-$body-background-color: #f0f0f0;
+// $body-background-color: #f0f0f0;
+// $body-color: hsl(0, 0%, 29%);
 // $control-border-width: 2px;
 // $input-border-color: transparent;
 // $input-shadow: none;
 
+// $navbar-background-color:	green	orange;
+// $navbar-box-shadow-size:	0 2px 0 0	;
+// $navbar-box-shadow-color:	$background	hsl(0, 0%, 96%);
+// $navbar-height:	3.25rem	;
+// $navbar-padding-vertical:	1rem	;
+// $navbar-padding-horizontal:	2rem	;
+// $navbar-z:	30	;
+// $navbar-fixed-z:	30	;
+// $navbar-item-color:	$grey-dark	hsl(0, 0%, 29%);
+// $navbar-item-hover-color:	$link	hsl(217, 71%, 53%);
+// $navbar-item-hover-background-color:	$white-bis	hsl(0, 0%, 98%);
+// $navbar-item-active-color:	$black	hsl(0, 0%, 4%);
+// $navbar-item-active-background-color:	transparent	;
+// $navbar-item-img-max-height:	1.75rem	;
+// $navbar-burger-color:	$navbar-item-color	;
+// $navbar-tab-hover-background-color:	transparent	;
+// $navbar-tab-hover-border-bottom-color:	$link	hsl(217, 71%, 53%);
+// $navbar-tab-active-color:	$link	hsl(217, 71%, 53%);
+// $navbar-tab-active-background-color:	transparent	;
+// $navbar-tab-active-border-bottom-color:	$link	hsl(217, 71%, 53%);
+// $navbar-tab-active-border-bottom-style:	solid	;
+// $navbar-tab-active-border-bottom-width:	3px	;
+// $navbar-dropdown-background-color:	$white	hsl(0, 0%, 100%);
+// $navbar-dropdown-border-top:	2px solid $border	;
+// $navbar-dropdown-offset:	-4px	;
+// $navbar-dropdown-arrow:	$link	hsl(217, 71%, 53%);
+// $navbar-dropdown-radius:	$radius-large	6px;
+// $navbar-dropdown-z:	20	;
+// $navbar-dropdown-boxed-radius:	$radius-large	6px;
+// $navbar-dropdown-boxed-shadow:	0 8px 8px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1)	;
+// $navbar-dropdown-item-hover-color:	$black	hsl(0, 0%, 4%);
+// $navbar-dropdown-item-hover-background-color:	$background	hsl(0, 0%, 96%);
+// $navbar-dropdown-item-active-color:	$link	hsl(217, 71%, 53%);
+// $navbar-dropdown-item-active-background-color:	$background	hsl(0, 0%, 96%);
+// $navbar-divider-background-color:	$background	hsl(0, 0%, 96%);
+// $navbar-divider-height:	2px	;
+// $navbar-bottom-box-shadow-size:	0 -2px 0 0	;
+// $navbar-breakpoint:	computed;
+// $desktop:	960px + (2 * $gap);
+
+$footer-padding: 3rem 1.5rem 4rem;
+
 // Import only what you need from Bulma
-@import "../node_modules/bulma/bulma.sass";
+@import '../node_modules/bulma/bulma.sass';
+
+// bulma vars
+
+// my vars
+$hover-ease: ease-out;
+$hover-speed: .3s;
+$hover-opacity: .6;
 
 body {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.navbar-item {
+  -webkit-transition: background-color $hover-speed $hover-ease;
+  -moz-transition: background-color $hover-speed $hover-ease;
+  -ms-transition: background-color $hover-speed $hover-ease;
+  -o-transition: background-color $hover-speed $hover-ease;
+  transition: background-color $hover-speed $hover-ease;
+}
+
+.fa-bars,
+.fa-times {
+  position: absolute;
+  margin: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.hero {
+  background-image: url('../images/bg.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+  background-size: cover;
+}
+
+.hero h1, 
+.hero h2 {
+  color: $black-bis;
+}
+
+#About .subtitle {
+  padding-top: 3.5rem;
+}
+
+.footer {
+  color: $white-bis;
+  background-color: $dark;
+}
+
+.footer p {
+  font-size: 10pt;
+}
+
+.social {
+  padding: 10px 0;
+}
+
+.social a {
+  padding: 0 5px;
+  color: inherit;
+  cursor: pointer;
+  -webkit-transition: opacity $hover-speed $hover-ease;
+  -moz-transition: opacity $hover-speed $hover-ease;
+  -ms-transition: opacity $hover-speed $hover-ease;
+  -o-transition: opacity $hover-speed $hover-ease;
+  transition: opacity $hover-speed $hover-ease;
+}
+.social a:hover,
+.social a:focus {
+  opacity: $hover-opacity;
+}
+
+@media screen and (min-width: 769px) {
+  #Contact .field.is-horizontal {
+      padding-right: 12.5%;
   }
-  
-  .navbar-item {
-    -webkit-transition: background-color .3s ease-out;
-    -moz-transition: background-color .3s ease-out;
-    -ms-transition: background-color .3s ease-out;
-    -o-transition: background-color .3s ease-out;
-    transition: background-color .3s ease-out;
-  }
-  
-  .fa-bars,
-  .fa-times {
-    position: absolute;
-    margin: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-  
-  .hero {
-    background-image: url('../images/bg.jpg');
-    background-color: #dedede;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-origin: content-box;
-    background-size: cover;
-  }
-  
-  .hero h1, 
-  .hero h2 {
-    color: #111;
-  }
-  
-  #About .subtitle {
-    padding-top: 3.5rem;
-  }
-  
-  .footer {
-    padding-bottom: 48px;
-    color: #f0f0f0;
-    background: #363636;
-  }
-  
-  .footer p {
-    font-size: 10pt;
-  }
-  
-  .social {
-    padding: 10px 0;
-  }
-  
-  .social a {
-    padding: 0 5px;
-    color: inherit;
-    cursor: pointer;
-    -webkit-transition: opacity .3s ease-out;
-    -moz-transition: opacity .3s ease-out;
-    -ms-transition: opacity .3s ease-out;
-    -o-transition: opacity .3s ease-out;
-    transition: opacity .3s ease-out;
-  }
-  .social a:hover,
-  .social a:focus {
-    opacity: .6;
-  }
-  
-  @media screen and (min-width: 769px) {
-    #Contact .field.is-horizontal {
-        padding-right: 12.5%;
-    }
-  }
-  
+}
