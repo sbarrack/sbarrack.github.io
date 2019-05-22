@@ -1,100 +1,100 @@
 @charset "utf-8";
 
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 
 // Update Bulma's global variables
-$family-primary: 'EB Garamond', serif;
-$grey-dark: #333;
-$grey-light: #555;
-$primary: purple;
-$link: orange;
+$family-sans-serif: 'Ubuntu', sans-serif;
+// $grey-dark: #333;
+// $grey-light: #555;
+// $primary: purple;
+// $link: orange;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
 // Update some of Bulma's component variables
-$body-background-color: #eee;
-$control-border-width: 2px;
-$input-border-color: transparent;
-$input-shadow: none;
+$body-background-color: #f0f0f0;
+// $control-border-width: 2px;
+// $input-border-color: transparent;
+// $input-shadow: none;
 
 // Import only what you need from Bulma
 @import "../node_modules/bulma/bulma.sass";
 
 body {
-    background: #f0f0f0 !important;
-    -webkit-user-select: none !important;
-    -moz-user-select: none !important;
-    -ms-user-select: none !important;
-    user-select: none !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   
   .navbar-item {
-    -webkit-transition: background-color .3s ease-out !important;
-    -moz-transition: background-color .3s ease-out !important;
-    -ms-transition: background-color .3s ease-out !important;
-    -o-transition: background-color .3s ease-out !important;
-    transition: background-color .3s ease-out !important;
+    -webkit-transition: background-color .3s ease-out;
+    -moz-transition: background-color .3s ease-out;
+    -ms-transition: background-color .3s ease-out;
+    -o-transition: background-color .3s ease-out;
+    transition: background-color .3s ease-out;
   }
   
   .fa-bars,
   .fa-times {
-    position: absolute !important;
-    margin: 50% !important;
-    -ms-transform: translate(-50%, -50%) !important;
-    transform: translate(-50%, -50%) !important;
+    position: absolute;
+    margin: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
   
   .hero {
-    background-image: url('images/bg.jpg') !important;
-    background-attachment: fixed !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-origin: content-box !important;
-    background-size: cover !important;
+    background-image: url('../images/bg.jpg');
+    background-color: #dedede;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: content-box;
+    background-size: cover;
   }
   
   .hero h1, 
   .hero h2 {
-    color: #111 !important;
+    color: #111;
   }
   
   #About .subtitle {
-    padding-top: 3.5rem !important;
+    padding-top: 3.5rem;
   }
   
   .footer {
-    padding-bottom: 48px !important;
-    color: #f0f0f0 !important;
-    background: #363636 !important;
+    padding-bottom: 48px;
+    color: #f0f0f0;
+    background: #363636;
   }
   
   .footer p {
-    font-size: 10pt !important;
+    font-size: 10pt;
   }
   
   .social {
-    padding: 10px 0 !important;
+    padding: 10px 0;
   }
   
   .social a {
-    padding: 0 5px !important;
-    color: inherit !important;
-    cursor: pointer !important;
-    -webkit-transition: opacity .3s ease-out !important;
-    -moz-transition: opacity .3s ease-out !important;
-    -ms-transition: opacity .3s ease-out !important;
-    -o-transition: opacity .3s ease-out !important;
-    transition: opacity .3s ease-out !important;
+    padding: 0 5px;
+    color: inherit;
+    cursor: pointer;
+    -webkit-transition: opacity .3s ease-out;
+    -moz-transition: opacity .3s ease-out;
+    -ms-transition: opacity .3s ease-out;
+    -o-transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out;
   }
   .social a:hover,
   .social a:focus {
-    opacity: .6 !important;
+    opacity: .6;
   }
   
   @media screen and (min-width: 769px) {
     #Contact .field.is-horizontal {
-        padding-right: 12.5% !important;
+        padding-right: 12.5%;
     }
   }
   
