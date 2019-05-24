@@ -6959,6 +6959,8 @@ label.panel-block {
   padding: 3rem 1.5rem 4rem; }
 
 body {
+  display: flex;
+  flex-direction: column;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -6992,7 +6994,8 @@ body {
 
 .footer {
   color: #fafafa;
-  background-color: #363636; }
+  background-color: #363636;
+  margin-top: auto; }
 
 .footer p {
   font-size: 10pt; }
