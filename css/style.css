@@ -6961,6 +6961,7 @@ label.panel-block {
 body {
   display: flex;
   flex-direction: column;
+  flex: 1 0 auto;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
