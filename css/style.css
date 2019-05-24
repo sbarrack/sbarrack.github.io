@@ -1,6 +1,4 @@
 /*! bulma.io v0.7.5 | MIT License | github.com/jgthms/bulma */
-@import url(../node_modules/aos/dist/aos.css);
-@import url(../node_modules/@fortawesome/fontawesome-free/css/all.min.css);
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
@@ -6959,9 +6957,6 @@ label.panel-block {
   padding: 3rem 1.5rem 4rem; }
 
 body {
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 auto;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -6995,8 +6990,7 @@ body {
 
 .footer {
   color: #fafafa;
-  background-color: #363636;
-  margin-top: auto; }
+  background-color: #363636; }
 
 .footer p {
   font-size: 10pt; }

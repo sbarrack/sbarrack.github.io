@@ -103,9 +103,6 @@ $hover-speed: .3s;
 $hover-opacity: .6;
 
 body {
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 auto;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -145,7 +142,6 @@ body {
 .footer {
   color: $white-bis;
   background-color: $dark;
-  margin-top: auto;
 }
 
 .footer p {
@@ -169,7 +165,3 @@ body {
 .social a:hover {
   opacity: $hover-opacity;
 }
-
-// other imports
-@import '../node_modules/aos/dist/aos.css';
-@import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
