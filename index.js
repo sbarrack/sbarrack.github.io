@@ -2,6 +2,12 @@ $(document).ready(function () {
     const end = 2
     var count = 0
 
+    AOS.init(/* {
+        offset: 200,
+        duration: 600,
+        easing: 'ease-in-sine',
+        delay: 100,
+    } */)
     $('.navbar-burger').click(toggleNav)
     $('.navbar-end .navbar-item').click(toggleNav)
 
