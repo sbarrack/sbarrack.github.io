@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link rel="stylesheet" href="css/style.css">
     <script src="node_modules/aos/dist/aos.js"></script>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
@@ -27,9 +27,9 @@
             <div class="navbar-start"></div>
             <div class="navbar-end">
                 <a href="#Home" class="navbar-item is-size-5">Home</a>
-                <a href="#About" class="navbar-item is-size-5">About</a>
                 <a href="#Portfolio" class="navbar-item is-size-5">Portfolio</a>
                 <a href="#Testamonials" class="navbar-item is-size-5">Testamonials</a>
+                <a href="#About" class="navbar-item is-size-5">About</a>
                 <a href="#Contact" class="navbar-item is-size-5">Contact</a>
             </div>
         </div>
@@ -44,6 +44,22 @@
         </div>
     </section>
 
+    <section id="Portfolio" class="section">
+        <div class="container has-text-centered" data-aos="fade">
+            <h1 class="title">Portfolio</h1>
+            <h2 class="subtitle">My past works be them completed or in progress. Make these sections be 2/3 width mobile
+                and up.</h2>
+        </div>
+    </section>
+
+    <section id="Testamonials" class="section">
+        <div class="container has-text-centered" data-aos="fade">
+            <h1 class="title">Testamonials</h1>
+            <h2 class="subtitle">Get a testamonial from Chris and maybe one or two others to start after making a
+                placeholder one below.</h2>
+        </div>
+    </section>
+
     <section id="About" class="section">
         <div class="container has-text-centered" data-aos="fade">
             <h1 class="title">About</h1>
@@ -54,102 +70,69 @@
                     </figure>
                 </div>
                 <div class="column is-half-desktop">
-                    <h2 class="subtitle has-text-left">I'm a full-time undergrad at San Diego State University, studying Computer Science. See my <a href="blog.stephenbarrack.com">blog</a> &lt;link to a subdomain and have another reacheable link to it, also replace that cruddy image with a headshot&gt; to find out what's hip and happening with my projects!</h2>
+                    <h2 class="subtitle has-text-left">I'm a full-time undergrad at San Diego State University, studying
+                        Computer Science. See my <a href="blog.stephenbarrack.com">blog</a> &lt;link to a subdomain and
+                        have another reacheable link to it, also replace that cruddy image with a headshot&gt; to find
+                        out what's hip and happening with my projects!</h2>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="Portfolio" class="section">
-        <div class="container has-text-centered" data-aos="fade">
-            <h1 class="title">Portfolio</h1>
-            <h2 class="subtitle">My past works be them completed or in progress. Make these sections be 2/3 width mobile and up.</h2>
-        </div>
-    </section>
-
-    <section id="Testamonials" class="section">
-        <div class="container has-text-centered" data-aos="fade">
-            <h1 class="title">Testamonials</h1>
-            <h2 class="subtitle">Get a testamonial from Chris and maybe one or two others to start after making a placeholder one below.</h2>
         </div>
     </section>
 
     <section id="Contact" class="section">
         <div class="container has-text-centered" data-aos="fade">
             <h1 class="title">Contact</h1>
-            <h2 class="subtitle">Make a card with links to my contact or something above or near the form. Also, make the form work.</h2>
+            <h2 class="subtitle">Make a card with links to my contact or something above or near the form. Also, make
+                the form work.</h2>
 
-            <div class="field is-horizontal">
-                <div class="field-label is-normal">
-                    <label class="label">From</label>
-                </div>
-                <div class="field-body">
-                    <div class="field">
-                        <p class="control is-expanded has-icons-left">
-                            <input class="input" type="text" placeholder="John Doe">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-user"></i>
-                            </span>
-                        </p>
-                    </div>
-                    <div class="field">
-                        <p class="control is-expanded has-icons-left">
-                            <input class="input" type="email" placeholder="example@email.com">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-envelope"></i>
-                            </span>
-                        </p>
-                    </div>
-                    <div class="field is-expanded">
-                        <div class="field has-addons">
-                            <p class="control">
-                                <a class="button is-static">
-                                    +1
-                                </a>
-                            </p>
-                            <p class="control is-expanded has-icons-left">
-                                <input class="input" type="tel" placeholder="(555) 555-5555">
-                                <span class="icon is-small is-left">
-                                    <i class="fas fa-mobile-alt"></i>
-                                </span>
-                            </p>
+            <div class="columns is-centered">
+                <div class="column is-three-quarters-tablet is-two-thirds-desktop is-half-fullhd">
+                    <div class="field is-horizontal">
+                        <div class="field-body">
+                            <div class="field is-grouped">
+                                <p class="control has-icons-left is-expanded">
+                                    <input class="input" type="text" placeholder="Name">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                </p>
+                                <p class="control has-icons-left is-expanded">
+                                    <input class="input" type="email" placeholder="Email">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="field is-horizontal">
-                <div class="field-label is-normal">
-                    <label class="label">Subject</label>
-                </div>
-                <div class="field-body">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Subject line...">
+                    <div class="field is-horizontal">
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Subject">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="field is-horizontal">
-                <div class="field-label is-normal">
-                    <label class="label">Message</label>
-                </div>
-                <div class="field-body">
-                    <div class="field">
-                        <div class="control">
-                            <textarea class="textarea" placeholder="Message body..."></textarea>
+                    <div class="field is-horizontal">
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <textarea class="textarea" placeholder="Message"></textarea>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="field is-horizontal">
-                <div class="field-label"></div>
-                <div class="field-body">
-                    <div class="field">
-                        <div class="control">
-                            <button class="button">Send</button>
+                    <div class="field is-horizontal">
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button">Send</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

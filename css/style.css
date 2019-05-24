@@ -1,6 +1,6 @@
 /*! bulma.io v0.7.5 | MIT License | github.com/jgthms/bulma */
 @import url(../node_modules/aos/dist/aos.css);
-@import url(../node_modules/@fortawesome/fontawesome-free/css/all.css);
+@import url(../node_modules/@fortawesome/fontawesome-free/css/all.min.css);
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
@@ -6990,9 +6990,6 @@ body {
 .hero h2 {
   color: #121212; }
 
-#About .subtitle {
-  padding-top: 3.5rem; }
-
 .footer {
   color: #fafafa;
   background-color: #363636; }
@@ -7013,10 +7010,5 @@ body {
   -o-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out; }
 
-.social a:hover,
-.social a:focus {
+.social a:hover {
   opacity: 0.6; }
-
-@media screen and (min-width: 769px) {
-  #Contact .field.is-horizontal {
-    padding-right: 12.5%; } }

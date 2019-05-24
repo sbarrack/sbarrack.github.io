@@ -139,10 +139,6 @@ body {
   color: $black-bis;
 }
 
-#About .subtitle {
-  padding-top: 3.5rem;
-}
-
 .footer {
   color: $white-bis;
   background-color: $dark;
@@ -166,17 +162,10 @@ body {
   -o-transition: opacity $hover-speed $hover-ease;
   transition: opacity $hover-speed $hover-ease;
 }
-.social a:hover,
-.social a:focus {
+.social a:hover {
   opacity: $hover-opacity;
-}
-
-@media screen and (min-width: 769px) {
-  #Contact .field.is-horizontal {
-      padding-right: 12.5%;
-  }
 }
 
 // other imports
 @import '../node_modules/aos/dist/aos.css';
-@import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
