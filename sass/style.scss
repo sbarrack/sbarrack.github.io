@@ -1,49 +1,18 @@
 @charset 'utf-8';
 
-// Update Bulma's global variables
-$black: hsl(0, 0%, 4%);
-$black-bis: hsl(0, 0%, 7%);
-$black-ter: hsl(0, 0%, 14%);
-$grey-darker: hsl(0, 0%, 21%);
-$grey-dark: hsl(0, 0%, 29%);
-$grey: hsl(0, 0%, 48%);
-$grey-light: hsl(0, 0%, 71%);
-$grey-lighter: hsl(0, 0%, 86%);
-$white-ter: hsl(0, 0%, 96%);
-$white-bis: hsl(0, 0%, 98%);
-$white: hsl(0, 0%, 100%);
-$orange: hsl(14, 100%, 53%);
-$yellow: hsl(48, 100%, 67%);
-$green: hsl(141, 71%, 48%);
-$turquoise: hsl(171, 100%, 41%);
-$cyan: hsl(204, 86%, 53%);
-$blue: hsl(217, 71%, 53%);
-$purple: hsl(271, 100%, 71%);
-$red: hsl(348, 100%, 61%);
+$black-bis: hsl(0, 0%, 7%); // .hero
+$grey-darker: hsl(0, 0%, 21%); // $dark (.footer), $link-hover, $link-focus, $link-active, $text-strong
+// $grey-dark: hsl(0, 0%, 29%); // $link-active-border, $text
+// $grey-light: hsl(0, 0%, 71%); // $text-light, $link-hover-border
+$white-bis: hsl(0, 0%, 98%); // .footer
+// $yellow: hsl(48, 100%, 67%); // $warning
+// $green: hsl(141, 71%, 48%); // $success
+// $turquoise: hsl(171, 100%, 41%); // $primary
+// $cyan: hsl(204, 86%, 53%); // $info
+// $blue: hsl(217, 71%, 53%); // $link, $link-focus-border
+// $purple: hsl(271, 100%, 71%); // $link-visited
+// $red: hsl(348, 100%, 61%); // $danger, $code
 
-// $primary: $turquoise;
-// $link: $blue;
-// $link-visited: $purple;
-// $link-hover: $grey-darker;
-// $link-hover-border: $grey-light;
-// $link-focus: $grey-darker;
-// $link-focus-border: $blue;
-// $link-active: $grey-darker;
-// $link-active-border: $grey-dark;
-// $info: $cyan;
-// $success: $green;
-// $warning: $yellow;
-// $danger: $red;
-// $dark: $grey-darker;
-// $text: $grey-dark;
-// $text-light: $grey;
-// $text-strong: $grey-darker;
-// $code: $red;
-
-// $widescreen-enabled: false;
-// $fullhd-enabled: false;
-
-// Update some of Bulma's component variables
 // $body-background-color: #f0f0f0;
 // $body-color: hsl(0, 0%, 29%);
 // $control-border-width: 2px;
@@ -90,14 +59,11 @@ $red: hsl(348, 100%, 61%);
 // $navbar-breakpoint:	computed;
 // $desktop:	960px + (2 * $gap);
 
-$footer-padding: 3rem 1.5rem 4rem;
+$footer-padding: 2rem 1.5rem 2.5rem;
 
 // Import only what you need from Bulma
 @import '../node_modules/bulma/bulma.sass';
 
-// bulma vars
-
-// my vars
 $hover-ease: ease-out;
 $hover-speed: .3s;
 $hover-opacity: .6;
@@ -164,4 +130,8 @@ body {
 }
 .social a:hover {
   opacity: $hover-opacity;
+}
+
+#error404title {
+  font-size: 120pt;
 }

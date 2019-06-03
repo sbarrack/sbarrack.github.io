@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"
+        rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -15,133 +17,134 @@
 </head>
 
 <body>
-    <nav class="navbar is-fixed-top is-spaced is-dark" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="/">
-                <img src="images/logo.png" width="112" height="28">
-            </a>
+    <div id="page">
+        <nav class="navbar is-fixed-top is-spaced is-dark" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="images/logo.png" width="112" height="28">
+                </a>
 
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navi">
-                <i class="icon fas fa-bars fa-lg"></i>
-            </a>
-        </div>
-
-        <div id="navi" class="navbar-menu">
-            <div class="navbar-start"></div>
-            <div class="navbar-end">
-                <a href="#Home" class="navbar-item is-size-5">Home</a>
-                <a href="#Portfolio" class="navbar-item is-size-5">Portfolio</a>
-                <a href="#Testamonials" class="navbar-item is-size-5">Testamonials</a>
-                <a href="#About" class="navbar-item is-size-5">About</a>
-                <a href="#Contact" class="navbar-item is-size-5">Contact</a>
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                    data-target="navi">
+                    <i class="icon fas fa-bars fa-lg"></i>
+                </a>
             </div>
-        </div>
-    </nav>
 
-    <section id="Home" class="hero is-fullheight">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title is-1">Stephen Barrack</h1>
-                <h2 class="subtitle is-4">I do computer-type stuff</h1>
-            </div>
-        </div>
-    </section>
-
-    <section id="Portfolio" class="section">
-        <div class="container has-text-centered" data-aos="fade">
-            <h1 class="title">Portfolio</h1>
-            <h2 class="subtitle">My past works be them completed or in progress. Make these sections be 2/3 width mobile
-                and up.</h2>
-        </div>
-    </section>
-
-    <section id="Testamonials" class="section">
-        <div class="container has-text-centered" data-aos="fade">
-            <h1 class="title">Testamonials</h1>
-            <h2 class="subtitle">Get a testamonial from Chris and maybe one or two others to start after making a
-                placeholder one below.</h2>
-        </div>
-    </section>
-
-    <section id="About" class="section">
-        <div class="container has-text-centered" data-aos="fade">
-            <h1 class="title">About</h1>
-            <div class="columns is-mobile is-centered is-vcentered">
-                <div class="column is-narrow">
-                    <figure class="image is-128x128 is-pulled-right">
-                        <img class="is-rounded" src="images/me.jpg">
-                    </figure>
-                </div>
-                <div class="column is-half-desktop">
-                    <h2 class="subtitle has-text-left">I'm a full-time undergrad at San Diego State University, studying
-                        Computer Science. See my <a href="/">blog</a> &lt;link to a subdomain and
-                        have another reacheable link to it, also replace that cruddy image with a headshot&gt; to find
-                        out what's hip and happening with my projects!</h2>
+            <div id="navi" class="navbar-menu">
+                <div class="navbar-start"></div>
+                <div class="navbar-end">
+                    <a href="#Home" class="navbar-item is-size-5">Home</a>
+                    <a href="#Portfolio" class="navbar-item is-size-5">Portfolio</a>
+                    <a href="#Testamonials" class="navbar-item is-size-5">Testamonials</a>
+                    <a href="#About" class="navbar-item is-size-5">About</a>
+                    <a href="#Contact" class="navbar-item is-size-5">Contact</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </nav>
 
-    <section id="Contact" class="section">
-        <div class="container has-text-centered" data-aos="fade">
-            <h1 class="title">Contact</h1>
-            <h2 class="subtitle">Make a card with links to my contact or something above or near the form. Also, make
-                the form work.</h2>
+        <section id="Home" class="hero is-fullheight">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title is-1">Stephen Barrack</h1>
+                    <h2 class="subtitle is-4">I do computer-type stuff</h1>
+                </div>
+            </div>
+        </section>
 
-            <div class="columns is-centered">
-                <div class="column is-three-quarters-tablet is-two-thirds-desktop is-half-fullhd">
-                    <div class="field is-horizontal">
-                        <div class="field-body">
-                            <div class="field is-grouped">
-                                <p class="control has-icons-left is-expanded">
-                                    <input class="input" type="text" placeholder="Name">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-user"></i>
-                                    </span>
-                                </p>
-                                <p class="control has-icons-left is-expanded">
-                                    <input class="input" type="email" placeholder="Email">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-envelope"></i>
-                                    </span>
-                                </p>
+        <section id="Portfolio" class="section">
+            <div class="container has-text-centered" data-aos="fade">
+                <h1 class="title">Portfolio</h1>
+                <h2 class="subtitle">My past works be them completed or in progress. Make these sections be 2/3 width
+                    mobile and up.
+                </h2>
+            </div>
+        </section>
+
+        <section id="Testamonials" class="section">
+            <div class="container has-text-centered" data-aos="fade">
+                <h1 class="title">Testamonials</h1>
+                <h2 class="subtitle">Get a testamonial from Chris and maybe one or two others to start after making a
+                    placeholder one below.
+                </h2>
+            </div>
+        </section>
+
+        <section id="About" class="section">
+            <div class="container has-text-centered" data-aos="fade">
+                <h1 class="title">About</h1>
+                <figure class="image is-128x128">
+                    <img class="is-rounded" src="images/me.jpg">
+                </figure>
+                <h2 class="subtitle">I'm a full-time undergrad at San Diego State University, studying
+                    Computer Science. See my <a href="/">blog</a> &lt;link to a subdomain and
+                    have another reacheable link to it, also replace that cruddy image with a headshot&gt; to find
+                    out what's hip and happening with my projects!
+                </h2>
+            </div>
+        </section>
+
+        <section id="Contact" class="section">
+            <div class="container has-text-centered" data-aos="fade">
+                <h1 class="title">Contact</h1>
+                <h2 class="subtitle">Make a card with links to my contact or something above or near the form. Also,
+                    make the form work.
+                </h2>
+
+                <div class="columns is-centered">
+                    <div class="column is-three-quarters-tablet is-two-thirds-desktop is-half-fullhd">
+                        <div class="field is-horizontal">
+                            <div class="field-body">
+                                <div class="field is-grouped">
+                                    <p class="control has-icons-left is-expanded">
+                                        <input class="input" type="text" placeholder="Name">
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                    </p>
+                                    <p class="control has-icons-left is-expanded">
+                                        <input class="input" type="email" placeholder="Email">
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="field is-horizontal">
-                        <div class="field-body">
-                            <div class="field">
-                                <div class="control">
-                                    <input class="input" type="text" placeholder="Subject">
+                        <div class="field is-horizontal">
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="input" type="text" placeholder="Subject">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal">
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <textarea class="textarea" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal">
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button">Send</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="field is-horizontal">
-                        <div class="field-body">
-                            <div class="field">
-                                <div class="control">
-                                    <textarea class="textarea" placeholder="Message"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="field is-horizontal">
-                        <div class="field-body">
-                            <div class="field">
-                                <div class="control">
-                                    <button class="button">Send</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <footer class="footer">
         <div class="content has-text-centered">

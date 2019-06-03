@@ -6954,7 +6954,7 @@ label.panel-block {
 
 .footer {
   background-color: #fafafa;
-  padding: 3rem 1.5rem 4rem; }
+  padding: 2rem 1.5rem 2.5rem; }
 
 body {
   -webkit-user-select: none;
@@ -7010,3 +7010,6 @@ body {
 
 .social a:hover {
   opacity: 0.6; }
+
+#error404title {
+  font-size: 120pt; }
