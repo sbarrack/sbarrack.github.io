@@ -13,7 +13,7 @@ $(document).ready(function () {
 
     $(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault()
-        $('html, body').animate({ scrollTop: $($.attr(this, 'href')).offset().top - 52 }, 500)
+        $('html, body').animate({ scrollTop: $($.attr(this, 'href')).offset().top - $('.navbar').outerHeight(true) }, 500)
     })
 
     $(window).resize(function () {

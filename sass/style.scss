@@ -83,6 +83,7 @@ $navbar-item-color: $white;
 
 // $desktop: 960px + (2 * $gap);
 
+$section-padding: 1.5rem;
 $footer-padding: 2rem 1.5rem 2.5rem;
 
 // Import only what you need from Bulma
@@ -105,6 +106,12 @@ body {
     -ms-transition: background-color $hover-speed $hover-ease;
     -o-transition: background-color $hover-speed $hover-ease;
     transition: background-color $hover-speed $hover-ease;
+}
+.navbar.is-dark .navbar-end > a.navbar-item:focus {
+    background-color: inherit;
+}
+.navbar.is-dark .navbar-end > a.navbar-item:hover {
+    background-color: #292929;
 }
 
 .fa-bars,

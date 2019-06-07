@@ -6945,7 +6945,7 @@ label.panel-block {
   padding: 3rem 1.5rem; }
 
 .section {
-  padding: 3rem 1.5rem; }
+  padding: 1.5rem; }
   @media screen and (min-width: 1024px) {
     .section.is-medium {
       padding: 9rem 1.5rem; }
@@ -6968,6 +6968,12 @@ body {
   -ms-transition: background-color 0.3s ease-out;
   -o-transition: background-color 0.3s ease-out;
   transition: background-color 0.3s ease-out; }
+
+.navbar.is-dark .navbar-end > a.navbar-item:focus {
+  background-color: inherit; }
+
+.navbar.is-dark .navbar-end > a.navbar-item:hover {
+  background-color: #292929; }
 
 .fa-bars,
 .fa-times {
