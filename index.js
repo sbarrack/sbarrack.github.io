@@ -1,7 +1,4 @@
 $(document).ready(function () {
-    const end = 2
-    var count = 0
-
     AOS.init(/* {
         offset: 200,
         duration: 600,

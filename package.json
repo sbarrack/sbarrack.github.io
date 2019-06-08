@@ -12,8 +12,6 @@
     "node-sass": "^4.12.0"
   },
   "scripts": {
-    "css-build": "node-sass --omit-source-map-url sass/style.scss css/style.css",
-    "css-watch": "yarn run css-build --watch",
-    "start": "yarn run css-watch"
+    "css-build": "yarn run node-sass --omit-source-map-url sass/style.scss css/style.css"
   }
 }
