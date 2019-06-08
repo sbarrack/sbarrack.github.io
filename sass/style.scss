@@ -39,6 +39,14 @@ $text-light: $grey;
 $text-strong: $grey-darker;
 $code: $red;
 
+$size-1: 5rem;
+// $size-2: 2.5rem;
+$size-3: 3rem;
+// $size-4: 1.5rem;
+// $size-5: 1.25rem;
+// $size-6: 1rem;
+// $size-7: 0.75rem;
+
 // $body-background-color: #f0f0f0;
 // $body-color: hsl(0, 0%, 29%);
 // $control-border-width: 2px;
@@ -129,11 +137,21 @@ body {
     background-position: center;
     background-origin: content-box;
     background-size: cover;
+    overflow: hidden;
 }
 
 .hero h1,
 .hero h2 {
-    color: $white-bis;
+    // color: $white-bis;
+    background-image: url('../images/bg.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+	color: transparent;
+	filter: invert(1) grayscale(1) contrast(5) drop-shadow(-.05em .05em $purple);
 }
 
 #About figure {
