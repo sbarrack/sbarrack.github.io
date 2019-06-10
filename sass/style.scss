@@ -53,7 +53,7 @@ $size-3: 3rem;
 // $input-border-color: transparent;
 // $input-shadow: none;
 
-$navbar-background-color: $grey-dark;
+$navbar-background-color: $black-ter;
 // $navbar-box-shadow-size: 0 2px 0 0 ;
 // $navbar-box-shadow-color: hsl(0, 0%, 96%);
 // $navbar-height: 3.25rem ;
@@ -137,22 +137,11 @@ body {
     background-position: center;
     background-origin: content-box;
     background-size: cover;
-    overflow: hidden;
 }
 
 .hero h1,
 .hero h2 {
-    // color: $white-bis;
-    background-image: url('../images/bg.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    // positioning is a bit off on dt, a ton on mobile
-    background-size: cover;
-    -webkit-background-clip: text;
-    background-clip: text;
-	color: transparent;
-	filter: invert(1) grayscale(1) contrast(5) drop-shadow(-.05em .05em $purple);
+	color: $white-bis;
 }
 
 #About figure {

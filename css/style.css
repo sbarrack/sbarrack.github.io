@@ -4150,7 +4150,7 @@ a.list-item {
   padding: 20px; }
 
 .navbar {
-  background-color: #4a4a4a;
+  background-color: #242424;
   min-height: 3.25rem;
   position: relative;
   z-index: 30; }
@@ -4769,7 +4769,7 @@ a.navbar-item,
   .navbar-link::after {
     display: none; }
   .navbar-menu {
-    background-color: #4a4a4a;
+    background-color: #242424;
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
     padding: 0.5rem 0; }
     .navbar-menu.is-active {
@@ -6988,20 +6988,11 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-origin: content-box;
-  background-size: cover;
-  overflow: hidden; }
+  background-size: cover; }
 
 .hero h1,
 .hero h2 {
-  background-image: url("../images/bg.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  filter: invert(1) grayscale(1) contrast(5) drop-shadow(-0.05em 0.05em #b86bff); }
+  color: #fafafa; }
 
 #About figure {
   margin: auto;
