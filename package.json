@@ -13,5 +13,6 @@
   },
   "scripts": {
     "css-build": "yarn run node-sass --omit-source-map-url sass/style.scss css/style.css"
-  }
+  },
+  "devDependencies": {}
 }
