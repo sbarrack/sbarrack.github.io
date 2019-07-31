@@ -131,7 +131,8 @@ body {
 }
 
 .hero {
-    background-image: url('../images/bg.jpg');
+    // background-image: url('../images/bg.jpg');
+    background-color: $black-ter;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -141,7 +142,7 @@ body {
 
 .hero h1,
 .hero h2 {
-	color: $black-bis;
+	color: $black;
 }
 
 #About figure {
