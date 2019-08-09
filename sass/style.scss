@@ -39,6 +39,10 @@ $footer-padding: 2rem 1.5rem;
 // Import only what you need from Bulma
 @import '../node_modules/bulma/bulma.sass';
 
+* {   
+    outline: none;
+}
+
 body {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -47,6 +51,7 @@ body {
 }
 
 .navbar-item {
+    margin-left: .5rem;
     -webkit-transition: background-color $hover-speed $hover-ease;
     -moz-transition: background-color $hover-speed $hover-ease;
     -ms-transition: background-color $hover-speed $hover-ease;
@@ -75,10 +80,12 @@ body {
 
 #About .container {
     max-width: 500px;
+    padding-top: 1rem;
 }
 
 .footer {
     background-color: $my-color-4;
+    margin-top: 1rem;
 }
 
 .footer p {

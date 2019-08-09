@@ -6956,6 +6956,9 @@ label.panel-block {
   background-color: #bbb;
   padding: 2rem 1.5rem; }
 
+* {
+  outline: none; }
+
 body {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -6963,6 +6966,7 @@ body {
   user-select: none; }
 
 .navbar-item {
+  margin-left: .5rem;
   -webkit-transition: background-color 0.3s ease-out;
   -moz-transition: background-color 0.3s ease-out;
   -ms-transition: background-color 0.3s ease-out;
@@ -6986,10 +6990,12 @@ body {
   margin-bottom: 10px; }
 
 #About .container {
-  max-width: 500px; }
+  max-width: 500px;
+  padding-top: 1rem; }
 
 .footer {
-  background-color: #132116; }
+  background-color: #132116;
+  margin-top: 1rem; }
 
 .footer p {
   font-size: 10pt; }
