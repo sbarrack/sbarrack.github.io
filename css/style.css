@@ -6989,7 +6989,7 @@ body {
   right: 0;
   margin-bottom: 10px; }
 
-#About .container {
+.section .container {
   max-width: 700px;
   padding-top: 1rem; }
 
