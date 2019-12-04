@@ -3642,7 +3642,7 @@ a.tag:hover {
     content: "\0227B"; }
 
 .card {
-  background-color: white;
+  background-color: #132116;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   color: #4a4a4a;
   max-width: 100%;
@@ -7018,3 +7018,16 @@ body {
 
 #error404title {
   font-size: 120pt; }
+
+.card {
+  margin-right: 20px; }
+
+.card-scroll-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; }
+  .card-scroll-wrapper::-webkit-scrollbar {
+    display: none; }
+  .card-scroll-wrapper .card {
+    flex: 0 0 auto; }

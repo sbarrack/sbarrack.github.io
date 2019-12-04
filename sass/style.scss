@@ -36,6 +36,8 @@ $navbar-item-hover-background-color: $my-color-5;
 $section-padding: 1.5rem;
 $footer-padding: 2rem 1.5rem;
 
+$card-background-color: $my-color-4;
+
 // Import only what you need from Bulma
 @import '../node_modules/bulma/bulma.sass';
 
@@ -112,4 +114,24 @@ body {
 
 #error404title {
     font-size: 120pt;
+}
+
+.card {
+    margin-right: 20px;
+}
+
+// need to adjust this and the elements in this section to scroll properly
+.card-scroll-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        flex: 0 0 auto;
+    }
 }
