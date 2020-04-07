@@ -15,9 +15,6 @@ $hover-opacity: .6;
 $size-1: 4rem;
 $size-3: 2rem;
 
-$white-ter: #ddd;
-$white-bis: #bbb;
-
 $body-background-color: $my-color-3;
 $body-color: hsl(0,0,95%);
 
@@ -35,11 +32,13 @@ $navbar-item-hover-background-color: $my-color-5;
 
 $section-padding: 1.5rem;
 $footer-padding: 2rem 1.5rem;
+$footer-background-color: $my-color-4;
 
 $card-background-color: $my-color-4;
 
 // Import only what you need from Bulma
 @import '../node_modules/bulma/bulma.sass';
+
 * {   
     outline: none;
 }
@@ -49,6 +48,26 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+footer {
+    margin-top: 1rem;
+
+    p {
+        font-size: 10pt;
+        font-style: italic;
+    }
+}
+
+#404 {
+    font-size: 120pt;
+}
+
+#About figure {
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-bottom: 10px;
 }
 
 .navbar-item {
@@ -68,25 +87,9 @@ body {
     background-color: $my-color-2;
 }
 
-#About figure {
-    margin: auto;
-    left: 0;
-    right: 0;
-    margin-bottom: 10px;
-}
-
 .section .container {
     max-width: 700px;
     padding-top: 1rem;
-}
-
-.footer {
-    background-color: $my-color-4;
-    margin-top: 1rem;
-}
-
-.footer p {
-    font-size: 10pt;
 }
 
 .social {
@@ -97,18 +100,10 @@ body {
     padding: 0 5px;
     color: inherit;
     cursor: pointer;
-    -webkit-transition: opacity $hover-speed $hover-ease;
-    -moz-transition: opacity $hover-speed $hover-ease;
-    -ms-transition: opacity $hover-speed $hover-ease;
-    -o-transition: opacity $hover-speed $hover-ease;
     transition: opacity $hover-speed $hover-ease;
 }
 .social a:hover {
     opacity: $hover-opacity;
-}
-
-#error404title {
-    font-size: 120pt;
 }
 
 .card {
