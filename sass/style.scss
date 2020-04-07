@@ -49,10 +49,6 @@ footer p {
     font-style: italic;
 }
 
-#e404 {
-    font-size: 120pt;
-}
-
 .navbar-item {
     transition: background-color $hover-speed $hover-ease;
 
@@ -70,7 +66,6 @@ footer p {
 .fa-times {
     position: absolute;
     margin: 50%;
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -78,25 +73,25 @@ footer p {
     background-color: $my-color-2;
 }
 
-.card {
-    margin-right: 20px;
-}
+// .card {
+//     margin-right: 20px;
+// }
 
 // need to adjust this and the elements in this section to scroll properly
-.card-scroll-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+// .card-scroll-wrapper {
+//     display: flex;
+//     flex-wrap: nowrap;
+//     overflow-x: auto;
+//     -webkit-overflow-scrolling: touch;
 
-    &::-webkit-scrollbar {
-        display: none;
-    }
+//     &::-webkit-scrollbar {
+//         display: none;
+//     }
 
-    .card {
-        flex: 0 0 auto;
-    }
-}
+//     .card {
+//         flex: 0 0 auto;
+//     }
+// }
 
 .social > a {
     margin: 0 5px;
