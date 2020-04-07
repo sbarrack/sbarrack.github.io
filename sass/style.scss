@@ -13,7 +13,7 @@ $hover-ease: ease-out;
 $hover-speed: .3s;
 $hover-opacity: .6;
 
-// bulma vars
+// bulma overrides
 $size-1: 4rem;
 $size-3: 2rem;
 
@@ -43,12 +43,6 @@ body {
     -webkit-user-select: none;
 }
 
-footer p {
-    margin-top: 10px;
-    font-size: 10pt;
-    font-style: italic;
-}
-
 .navbar-item {
     transition: background-color $hover-speed $hover-ease;
 
@@ -73,9 +67,24 @@ footer p {
     background-color: $my-color-2;
 }
 
-// .card {
-//     margin-right: 20px;
-// }
+.social > a {
+    margin: 0 5px;
+    transition: opacity $hover-speed $hover-ease;
+
+    &:hover {
+        opacity: $hover-opacity;
+    }
+}
+
+#Testimonials .level {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+
+    @include desktop {
+        flex-direction: row;
+    }
+}
 
 // need to adjust this and the elements in this section to scroll properly
 // .card-scroll-wrapper {
@@ -93,11 +102,8 @@ footer p {
 //     }
 // }
 
-.social > a {
-    margin: 0 5px;
-    transition: opacity $hover-speed $hover-ease;
-
-    &:hover {
-        opacity: $hover-opacity;
-    }
+footer p {
+    margin-top: 10px;
+    font-size: 10pt;
+    font-style: italic;
 }
