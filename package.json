@@ -2,17 +2,23 @@
   "name": "sbarrack.github.io",
   "version": "1.0.0",
   "description": "Stephen Barrack's portfolio site",
-  "main": "style.scss",
+  "main": "sass/style.scss",
   "repository": "https://github.com/sbarrack/sbarrack.github.io.git",
   "author": "sbarrack <12619603+sbarrack@users.noreply.github.com>",
-  "license": "UNLICENSED",
+  "license": "SEE LICENSE IN LICENSE.md",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "aos": "^2.3.4",
     "bulma": "^0.7.5",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.13.1"
   },
   "scripts": {
     "css": "yarn run node-sass --omit-source-map-url sass/style.scss css/style.css"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  }
 }

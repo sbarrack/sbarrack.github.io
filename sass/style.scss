@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-//my vars
+// my vars
 $my-color-1: #39533d;
 $my-color-2: #253327;
 $my-color-3: #1b291d;
@@ -40,7 +40,6 @@ $card-background-color: $my-color-4;
 
 // Import only what you need from Bulma
 @import '../node_modules/bulma/bulma.sass';
-
 * {   
     outline: none;
 }
@@ -54,10 +53,6 @@ body {
 
 .navbar-item {
     margin-left: .5rem;
-    -webkit-transition: background-color $hover-speed $hover-ease;
-    -moz-transition: background-color $hover-speed $hover-ease;
-    -ms-transition: background-color $hover-speed $hover-ease;
-    -o-transition: background-color $hover-speed $hover-ease;
     transition: background-color $hover-speed $hover-ease;
 }
 
