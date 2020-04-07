@@ -7,6 +7,8 @@ $my-color-3: #1b291d;
 $my-color-4: #132116;
 $my-color-5: #0d130f;
 
+$white-ter: hsl(0, 0%, 96%);
+
 $hover-ease: ease-out;
 $hover-speed: .3s;
 $hover-opacity: .6;
@@ -16,21 +18,15 @@ $size-1: 4rem;
 $size-3: 2rem;
 
 $body-background-color: $my-color-3;
-$body-color: hsl(0,0,95%);
+$body-color: $white-ter;
 
 $navbar-background-color: $my-color-4;
-$navbar-item-color: hsl(0,0,95%);
+$navbar-item-color: $white-ter;
 $navbar-item-hover-color: $navbar-item-color;
 $navbar-item-hover-background-color: $my-color-5;
-// $navbar-item-active-color: hsl(0, 0%, 4%);
-// $navbar-item-active-background-color: transparent ;
-// $navbar-tab-hover-background-color: transparent ;
-// $navbar-tab-hover-border-bottom-color: hsl(217, 71%, 53%);
-// $navbar-tab-active-color: hsl(217, 71%, 53%);
-// $navbar-tab-active-background-color: transparent ;
-// $navbar-tab-active-border-bottom-color: hsl(217, 71%, 53%);
 
 $section-padding: 1.5rem;
+
 $footer-padding: 2rem 1.5rem;
 $footer-background-color: $my-color-4;
 
@@ -39,40 +35,35 @@ $card-background-color: $my-color-4;
 // Import only what you need from Bulma
 @import '../node_modules/bulma/bulma.sass';
 
-* {   
-    outline: none;
-}
-
 body {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    outline: none;
     user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
-footer {
-    margin-top: 1rem;
-
-    p {
-        font-size: 10pt;
-        font-style: italic;
-    }
+footer p {
+    margin-top: 10px;
+    font-size: 10pt;
+    font-style: italic;
 }
 
 #e404 {
     font-size: 120pt;
 }
 
-#About figure {
-    margin: auto;
-    left: 0;
-    right: 0;
-    margin-bottom: 10px;
+.navbar-item {
+    transition: background-color $hover-speed $hover-ease;
+
+    @include desktop {
+        margin: 0 .25rem;
+    }
 }
 
-.navbar-item {
-    margin-left: .5rem;
-    transition: background-color $hover-speed $hover-ease;
+.navbar-burger:hover {
+    background-color: $my-color-5;
+    color: inherit;
 }
 
 .fa-bars,
@@ -85,25 +76,6 @@ footer {
 
 .hero {
     background-color: $my-color-2;
-}
-
-.section .can {
-    max-width: 700px;
-    padding-top: 1rem;
-}
-
-.social {
-    padding: 10px 0;
-}
-
-.social a {
-    padding: 0 5px;
-    color: inherit;
-    cursor: pointer;
-    transition: opacity $hover-speed $hover-ease;
-}
-.social a:hover {
-    opacity: $hover-opacity;
 }
 
 .card {
@@ -123,5 +95,14 @@ footer {
 
     .card {
         flex: 0 0 auto;
+    }
+}
+
+.social > a {
+    margin: 0 5px;
+    transition: opacity $hover-speed $hover-ease;
+
+    &:hover {
+        opacity: $hover-opacity;
     }
 }
