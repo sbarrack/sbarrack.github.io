@@ -27,10 +27,11 @@ $navbar-item-hover-background-color: $my-color-5;
 
 $section-padding: 1.5rem;
 
+$box-background-color: $my-color-4;
+// $box-shadow: ;
+
 $footer-padding: 2rem 1.5rem;
 $footer-background-color: $my-color-4;
-
-$card-background-color: $my-color-4;
 
 // Import only what you need from Bulma
 @import '../node_modules/bulma/bulma.sass';
@@ -65,6 +66,10 @@ body {
 
 .hero {
     background-color: $my-color-2;
+
+    i {
+        display: none;
+    }
 }
 
 .social > a {
@@ -80,27 +85,16 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
-    @include desktop {
+    @include tablet {
         flex-direction: row;
     }
 }
-
-// need to adjust this and the elements in this section to scroll properly
-// .card-scroll-wrapper {
-//     display: flex;
-//     flex-wrap: nowrap;
-//     overflow-x: auto;
-//     -webkit-overflow-scrolling: touch;
-
-//     &::-webkit-scrollbar {
-//         display: none;
-//     }
-
-//     .card {
-//         flex: 0 0 auto;
-//     }
-// }
 
 footer p {
     margin-top: 10px;
