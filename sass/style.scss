@@ -7,6 +7,12 @@ $my-color-3: #1b291d;
 $my-color-4: #132116;
 $my-color-5: #0d130f;
 
+$blue: #3273dc;
+$dark-blue: #173d7a;
+
+$link: $blue;
+$link-hover: $dark-blue;
+
 $white-ter: hsl(0, 0%, 96%);
 
 $hover-ease: ease-out;
@@ -44,6 +50,12 @@ body {
     -webkit-user-select: none;
 }
 
+section:not(.hero) {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .navbar-item {
     transition: background-color $hover-speed $hover-ease;
 
@@ -70,6 +82,16 @@ body {
     i {
         display: none;
     }
+
+    &.is-fullheight-with-navbar {
+        min-height: calc(100vh - 20rem);
+    }
+}
+
+#About {
+    figure {
+        margin-bottom: 20px;
+    }
 }
 
 .social > a {
@@ -81,23 +103,52 @@ body {
     }
 }
 
-#Testimonials .level {
-    display: flex;
-    flex-direction: column;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+#Testimonials {
+    .columns {
+        display: flex;
+        flex-direction: column;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 auto;
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
     
-    &::-webkit-scrollbar {
-        display: none;
+        @include tablet {
+            flex-direction: row;
+        }
     }
 
-    @include tablet {
-        flex-direction: row;
+    .media {
+        height: 100%;
+
+        @include until-widescreen {
+            flex-direction: column;
+            align-items: center;
+
+            figure {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .media-content {
+        text-align: right;
+
+        .subtitle {
+            text-align: left;
+            margin-bottom: 10px;
+        }
     }
 }
 
-footer p {
-    margin-top: 10px;
-    font-size: 10pt;
-    font-style: italic;
+footer {
+    margin-top: 40px;
+
+    p {
+        margin-top: 10px;
+        font-size: 10pt;
+        font-style: italic;
+    }
 }
