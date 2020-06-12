@@ -124,9 +124,12 @@ section:not(.hero) {
     }
 }
 
-.social > a {
+.social > a.icon {
     margin: 0 5px;
     transition: opacity $hover-speed $hover-ease;
+    height: 32px;
+    width: auto;
+    fill: $white-ter;
 
     &:hover {
         opacity: $hover-opacity;
