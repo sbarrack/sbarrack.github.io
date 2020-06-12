@@ -97,3 +97,8 @@ typings/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+!node_modules/jquery/dist/jquery.min.js
+!node_modules/aos/dist/aos.js
+!node_modules/aos/dist/aos.css
+# !node_modules/xterm/lib/xterm.js
