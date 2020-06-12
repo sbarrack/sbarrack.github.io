@@ -28,5 +28,9 @@
             $('.navbar-menu').toggleClass('is-active');
             $('nav .icon').toggleClass('fa-times').toggleClass('fa-bars');
         }
+
+        // var xterm = new Terminal();
+        // xterm.open($('#terminal')[0]);
+        // xterm.write('Testing, testaroo...');
     });
 })($, AOS);

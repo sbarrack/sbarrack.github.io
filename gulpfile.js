@@ -23,7 +23,8 @@ gulp.task('modules', () => {
         './node_modules/jquery/dist/jquery.min.js',
         './node_modules/aos/dist/aos.js',
         './node_modules/aos/dist/aos.css',
-        './node_modules/xterm/lib/xterm.js'
+        './node_modules/xterm/lib/xterm.js',
+        'node_modules/xterm/css/xterm.css'
     ]
     return gulp.src( sources ).pipe(gulp.dest('./dist/'));
 });
