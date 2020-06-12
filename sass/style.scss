@@ -16,8 +16,8 @@ $link-hover: $dark-blue;
 $white-ter: hsl(0, 0%, 96%);
 
 $hover-ease: ease-out;
-$hover-speed: .3s;
-$hover-opacity: .6;
+$hover-speed: .25s;
+$hover-opacity: .5;
 
 // bulma overrides
 $size-1: 4rem;
@@ -34,7 +34,7 @@ $navbar-item-hover-background-color: $my-color-5;
 $section-padding: 1.5rem;
 
 $box-background-color: $my-color-4;
-// $box-shadow: ;
+$box-shadow: 2px 2px 5px 2px $my-color-5;
 
 $footer-padding: 2rem 1.5rem;
 $footer-background-color: $my-color-4;
@@ -50,10 +50,41 @@ body {
     -webkit-user-select: none;
 }
 
+a {
+    transition: color $hover-speed;
+    cursor: pointer;
+}
+
 section:not(.hero) {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+}
+
+@include touch {
+    .navbar {
+        background-color: #0000;
+        max-height: 0;
+
+        > div:first-of-type {
+            background-color: $navbar-background-color;
+        }
+    }
+
+    .navbar-menu {
+        transform: translateY(-100vh);
+        transition: transform 0.5s ease-in;
+        z-index: -1;
+
+        &:not(.is-active) {
+            display: block;
+        }
+    
+        &.is-active {
+            transform: none;
+            transition: transform 0.5s ease-out;
+        }
+    }
 }
 
 .navbar-item {
@@ -122,6 +153,7 @@ section:not(.hero) {
 
     .media {
         height: 100%;
+        transition: transform $hover-speed $hover-ease, box-shadow $hover-speed $hover-ease;
 
         @include until-widescreen {
             flex-direction: column;
@@ -130,6 +162,11 @@ section:not(.hero) {
             figure {
                 margin-bottom: 10px;
             }
+        }
+
+        &:hover {
+            transform: translate(-10px, -10px);
+            box-shadow: 12px 12px 5px 2px $my-color-5;
         }
     }
 

@@ -24,6 +24,7 @@
 
         function toggleNav() { 
             $('.navbar-burger').toggleClass('is-active');
+            $('.navbar').toggleClass('is-active');
             $('.navbar-menu').toggleClass('is-active');
             $('nav .icon').toggleClass('fa-times').toggleClass('fa-bars');
         }
