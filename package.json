@@ -15,7 +15,7 @@
     "xterm": "^4.7.0"
   },
   "scripts": {
-    "css": "yarn run node-sass --omit-source-map-url sass/style.scss css/style.css"
+    "css": "node-sass --omit-source-map-url sass/style.scss css/style.css"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
