@@ -92,10 +92,10 @@ section:not(.hero) {
     
     &.enabled {
       transition: transform 0.5s ease-out;
-    }
 
-    &.is-active {
-      transform: none;
+      &.is-active {
+        transform: none;
+      }
     }
   }
 }

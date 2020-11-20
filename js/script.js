@@ -20,7 +20,6 @@
       // xterm.write('Testing, testaroo...');
     }
 
-    $burger.on("click", toggleNav);
     $(".navbar-item").on("click", toggleNav);
 
     $(document).on("click", 'a[href^="#"]', function (e) {
@@ -43,11 +42,16 @@
     });
 
     if (document.readyState === "complete") {
-      $menu.addClass("enabled");
+      enableNav();
     } else {
-      $window.on("load", function () {
+      $window.on("load", enableNav);
+    }
+
+    function enableNav() {
+      setTimeout(function() {
         $menu.addClass("enabled");
-      });
+        $burger.on("click", toggleNav);
+      }, 1000);
     }
 
     function toggleNav(e) {
