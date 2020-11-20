@@ -139,16 +139,25 @@ section:not(.hero) {
   }
 }
 
-.button {
-  cursor: default;
-  box-shadow: 2px 2px 3px 2px $my-color-4;
-  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out !important;
-  margin: 0 0.5rem 1rem !important;
+.buttons {
+  .button {
+    cursor: default;
+    pointer-events: none;
+    box-shadow: 2px 2px 3px 2px $my-color-4;
+    margin: 0 0.5rem 1rem !important;
+  }
 
-  &:hover,
-  &:focus {
-    transform: translate(-5px, -5px) !important;
-    box-shadow: 7px 7px 6px 2px $my-color-4 !important;
+  &.enabled {
+    .button {
+      pointer-events: auto;
+      transition: transform 0.25s ease-out, box-shadow 0.25s ease-out !important;
+    
+      &:hover,
+      &:focus {
+        transform: translate(-5px, -5px) !important;
+        box-shadow: 7px 7px 6px 2px $my-color-4 !important;
+      }
+    }
   }
 }
 

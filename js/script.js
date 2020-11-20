@@ -54,6 +54,7 @@
     function enableNav() {
       setTimeout(function() {
         $menu.addClass("enabled");
+        $(".buttons").addClass("enabled");
         $burger.on("click", toggleNav);
       }, 1000);
     }
