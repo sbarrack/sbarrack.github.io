@@ -10,7 +10,7 @@
     const $calendar = $(".calendar");
 
     AOS.init({
-      offset: 100,
+      offset: 200,
       duration: 400,
       easing: "ease-in-sine",
       delay: 150,

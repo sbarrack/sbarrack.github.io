@@ -39,6 +39,13 @@ $box-shadow: 4px 4px 5px 2px $my-color-5;
 $footer-padding: 2rem 1.5rem;
 $footer-background-color: $my-color-4;
 
+$button-color: $white-ter;
+$button-background-color: $my-color-1;
+$button-border-width: 0;
+$button-hover-color: $white-ter;
+$button-focus-color: $white-ter;
+$button-active-color: $white-ter;
+
 @import "../node_modules/bulma/bulma.sass";
 
 body {
@@ -89,7 +96,7 @@ section:not(.hero) {
     display: block;
     transform: translateY(-100vh);
     z-index: -1;
-    
+
     &.enabled {
       transition: transform 0.5s ease-out;
 
@@ -132,10 +139,21 @@ section:not(.hero) {
   }
 }
 
-#About {
-  figure {
-    margin-bottom: 20px;
+.button {
+  cursor: default;
+  box-shadow: 2px 2px 3px 2px $my-color-4;
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out !important;
+  margin: 0 0.5rem 1rem !important;
+
+  &:hover,
+  &:focus {
+    transform: translate(-5px, -5px) !important;
+    box-shadow: 7px 7px 6px 2px $my-color-4 !important;
   }
+}
+
+#About figure {
+  margin-bottom: 20px;
 }
 
 .social > a.icon {
@@ -183,7 +201,7 @@ section:not(.hero) {
 
     &:hover {
       transform: translate(-10px, -10px);
-      box-shadow: 12px 12px 5px 2px $my-color-5;
+      box-shadow: 12px 12px 7px 2px $my-color-5;
     }
   }
 
@@ -212,7 +230,7 @@ div.calendar {
   --color-calendar-graph-day-L1-bg: #e09e9c;
   --color-calendar-graph-day-L2-bg: #8d6161;
   --color-calendar-graph-day-L3-bg: #583c3b;
-  --color-calendar-graph-day-L4-bg: #422d2b;
+  --color-calendar-graph-day-L4-bg: #3d2a28;
 
   min-height: 0;
   border: none;
@@ -221,6 +239,11 @@ div.calendar {
 
   > div:first-child {
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   .contrib-footer {
