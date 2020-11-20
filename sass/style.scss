@@ -60,6 +60,11 @@ section:not(.hero) {
     margin-right: auto;
 }
 
+.navbar > div:first-child {
+    position: relative;
+    z-index: 2;
+}
+
 @include touch {
     .navbar {
         background-color: #0000;
