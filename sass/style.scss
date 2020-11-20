@@ -16,15 +16,15 @@ $link-hover: $dark-blue;
 $white-ter: hsl(0, 0%, 96%);
 
 $hover-ease: ease-out;
-$hover-speed: .25s;
-$hover-opacity: .5;
+$hover-speed: 0.25s;
+$hover-opacity: 0.5;
 
 // bulma overrides
 $size-1: 4rem;
 $size-3: 2rem;
 
-$body-background-color: $my-color-3;
 $body-color: $white-ter;
+$body-background-color: $my-color-3;
 
 $navbar-background-color: $my-color-4;
 $navbar-item-color: $white-ter;
@@ -39,160 +39,170 @@ $box-shadow: 2px 2px 5px 2px $my-color-5;
 $footer-padding: 2rem 1.5rem;
 $footer-background-color: $my-color-4;
 
-@import '../node_modules/bulma/bulma.sass';
+@import "../node_modules/bulma/bulma.sass";
 
 body {
-    outline: none;
-    user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
+  outline: none;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+#page {
+  margin-top: $navbar-height;
+
+  @include desktop {
+    margin-top: calc(1.875rem + calc(16px + #{2 * $navbar-padding-vertical}));
+  }
 }
 
 a {
-    transition: color $hover-speed;
-    cursor: pointer;
+  transition: color $hover-speed;
+  cursor: pointer;
 }
 
 section:not(.hero) {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.navbar > div:first-child {
+.navbar {
+  > div:first-child {
     position: relative;
     z-index: 2;
+  }
+
+  @include touch {
+    background-color: #0000;
+    max-height: 0;
+
+    > div:first-child {
+      background-color: $navbar-background-color;
+    }
+  }
 }
 
-@include touch {
-    .navbar {
-        background-color: #0000;
-        max-height: 0;
-
-        > div:first-of-type {
-            background-color: $navbar-background-color;
-        }
-    }
-
-    .navbar-menu {
-        transform: translateY(-100vh);
-        transition: transform 0.5s ease-in;
-        z-index: -1;
-
-        &:not(.is-active) {
-            display: block;
-        }
+.navbar-menu {
+  @include touch {
+    display: block;
+    transform: translateY(-100vh);
+    z-index: -1;
     
-        &.is-active {
-            transform: none;
-            transition: transform 0.5s ease-out;
-        }
+    &.enabled {
+      transition: transform 0.5s ease-out;
     }
+
+    &.is-active {
+      transform: none;
+    }
+  }
 }
 
 .navbar-item {
-    transition: background-color $hover-speed $hover-ease;
+  transition: background-color $hover-speed $hover-ease;
 
-    @include desktop {
-        margin: 0 .25rem;
-    }
+  @include desktop {
+    margin: 0 0.25rem;
+  }
 }
 
 .navbar-burger:hover {
-    background-color: $my-color-5;
-    color: inherit;
+  background-color: $my-color-5;
+  color: inherit;
 }
 
 .fa-bars,
 .fa-times {
-    position: absolute;
-    margin: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  margin: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .hero {
-    background-color: $my-color-2;
+  background-color: $my-color-2;
 
-    i {
-        display: none;
-    }
+  i {
+    display: none;
+  }
 
-    &.is-fullheight-with-navbar {
-        min-height: calc(100vh - 20rem);
-    }
+  &.is-fullheight-with-navbar {
+    min-height: calc(100vh - 20rem);
+  }
 }
 
 #About {
-    figure {
-        margin-bottom: 20px;
-    }
+  figure {
+    margin-bottom: 20px;
+  }
 }
 
 .social > a.icon {
-    margin: 0 5px;
-    transition: opacity $hover-speed $hover-ease;
-    height: 32px;
-    width: auto;
-    fill: $white-ter;
+  margin: 0 5px;
+  transition: opacity $hover-speed $hover-ease;
+  height: 32px;
+  width: auto;
+  fill: $white-ter;
 
-    &:hover {
-        opacity: $hover-opacity;
-    }
+  &:hover {
+    opacity: $hover-opacity;
+  }
 }
 
 #Testimonials {
-    .columns {
-        display: flex;
-        flex-direction: column;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        margin: 0 auto;
-        
-        &::-webkit-scrollbar {
-            display: none;
-        }
-    
-        @include tablet {
-            flex-direction: row;
-        }
+  .columns {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 auto;
+
+    &::-webkit-scrollbar {
+      display: none;
     }
 
-    .media {
-        height: 100%;
-        transition: transform $hover-speed $hover-ease, box-shadow $hover-speed $hover-ease;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
 
-        @include until-widescreen {
-            flex-direction: column;
-            align-items: center;
+  .media {
+    height: 100%;
+    transition: transform $hover-speed $hover-ease,
+      box-shadow $hover-speed $hover-ease;
 
-            figure {
-                margin-bottom: 10px;
-            }
-        }
+    @include until-widescreen {
+      flex-direction: column;
+      align-items: center;
 
-        &:hover {
-            transform: translate(-10px, -10px);
-            box-shadow: 12px 12px 5px 2px $my-color-5;
-        }
+      figure {
+        margin-bottom: 10px;
+      }
     }
 
-    .media-content {
-        text-align: right;
-
-        .subtitle {
-            text-align: left;
-            margin-bottom: 10px;
-        }
+    &:hover {
+      transform: translate(-10px, -10px);
+      box-shadow: 12px 12px 5px 2px $my-color-5;
     }
+  }
+
+  .media-content {
+    text-align: right;
+
+    .subtitle {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 footer {
-    margin-top: 40px;
+  margin-top: 40px;
 
-    p {
-        margin-top: 10px;
-        font-size: 10pt;
-        font-style: italic;
-    }
+  p {
+    margin-top: 10px;
+    font-size: 10pt;
+    font-style: italic;
+  }
 }
