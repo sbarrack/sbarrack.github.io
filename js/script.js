@@ -7,19 +7,23 @@
     const $burger = $(".navbar-burger");
     const $menu = $(".navbar-menu");
     const $terminal = $("#terminal");
+    const $calendar = $(".calendar");
 
     AOS.init({
-      offset: 200,
-      duration: 600,
+      offset: 100,
+      duration: 400,
       easing: "ease-in-sine",
-      delay: 100,
+      delay: 150,
     });
+
     if ($terminal.length) {
       let xterm = new Terminal();
       // xterm.open($terminal.get(0));
       // xterm.write('Testing, testaroo...');
     }
-
+    if ($calendar.length) {
+      let calendar = new GitHubCalendar(".calendar", "sbarrack");
+    }
     $(".navbar-item").on("click", toggleNav);
 
     $(document).on("click", 'a[href^="#"]', function (e) {

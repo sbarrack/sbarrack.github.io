@@ -33,8 +33,8 @@ $navbar-item-hover-background-color: $my-color-5;
 
 $section-padding: 1.5rem;
 
-$box-background-color: $my-color-4;
-$box-shadow: 2px 2px 5px 2px $my-color-5;
+$box-background-color: $my-color-2;
+$box-shadow: 4px 4px 5px 2px $my-color-5;
 
 $footer-padding: 2rem 1.5rem;
 $footer-background-color: $my-color-4;
@@ -204,5 +204,38 @@ footer {
     margin-top: 10px;
     font-size: 10pt;
     font-style: italic;
+  }
+}
+
+div.calendar {
+  --color-calendar-graph-day-bg: rgba(245, 245, 245, 0.1);
+  --color-calendar-graph-day-L1-bg: #e09e9c;
+  --color-calendar-graph-day-L2-bg: #8d6161;
+  --color-calendar-graph-day-L3-bg: #583c3b;
+  --color-calendar-graph-day-L4-bg: #422d2b;
+
+  min-height: 0;
+  border: none;
+  position: relative;
+  max-width: 722px;
+
+  > div:first-child {
+    overflow: auto;
+  }
+
+  .contrib-footer {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin-top: 10px;
+  }
+
+  .contrib-legend {
+    padding-right: 0;
+  }
+
+  .contrib-footer .float-left,
+  .contrib-column {
+    display: none;
   }
 }
